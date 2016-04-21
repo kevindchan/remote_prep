@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="background-color: #ffa500">
+	<head>
+
+		<style>
+			#explain {
+				color: #008080;
+				font-style: bold;
+				font-size: 24px;
+			}
+			.even {
+				color: red;
+			}
+			.odd {
+				color: blue;
+			}
+			#sum {
+				font-size: 30px;
+				color: black;
+			}
+		</style>	
+	</head>
+
+	<body>
+		<div id="explain"></div>
+
+		<script type="text/javascript">
+			// Exercise: Cumulative Sum
+
+			//1. Write a while loop that computes the product of multiplying the first n positive integers: product = 1 * 2 * 3 * ... * n.
+			//2. Use .innerHTML to place a formatted piece of text into the HTML document that explains what n was and what the product of the numbers computed to.
+			//3. Give the tags different classes and ids that match pre-written CSS with some styling to make it a bit prettier.
+
+			var n = 1, 
+				sum = 1, 
+				string = "";
+
+			while (n < 20) {
+				sum *= n; 
+				n++;
+			};
+			
+			for (var i = 20; i >= 1; i--) {
+				if (i % 2 === 0) {
+					string += "<span class='even'> " + i + " </span>" + "x";
+				} else {
+					string += "<span class='odd'> " + i  + " </span>" + (i === 1 ? "" : "x");
+				}
+			};
+
+			document.querySelector("#explain").innerHTML = "The number " + sum + " represents the factorial of " + n + ", which is the product of the numbers:" + "<p>" + string + "</p>";
+		</script>
+	</body>
+</html>

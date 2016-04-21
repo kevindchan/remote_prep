@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html style="background-color: #b9eaec">
+	<head>
+		<title>Choose your own adventure!</title>
+	</head>
+
+	<body>
+		<h1 style="color: #076769">Choose your own adventure!</h1>
+
+		<h4>There once was a boy...</h4>
+
+			<p style="margin-left: 20px">...who ran into the woods. He chose to go <span id="upDown"></span> the mountain and quickly became lost. 
+			<span id="upMountain"> </span><span id="downMountain"> </span>
+			<span id="yesZipLine"> </span><span id="noZipLine"> </span>
+			<span id="yesRaft"> </span><span id="noRaft"> </span>
+			</p>
+
+		<script type="text/javascript">
+			//ask user if boy goes up or down mountain
+			var mountainChoice = prompt("As the boy, do you choose to go up the mountain or down?");
+			//print decision into text
+			document.querySelector("#upDown").textContent = mountainChoice;
+			//based on up/down, write if/else statement to go to mountain top (up) or river (down)
+			if (mountainChoice.toLowerCase() === "up") {
+				document.querySelector("#upMountain").textContent = "When the boy reached the mountain top, he found a zip line!";
+				var zipLine = prompt("Does the boy take the zip line?");
+				if (zipLine.toLowerCase() === "yes") {
+					document.querySelector("#yesZipLine").textContent = "Flying down the zip line, a rescue helicopter sees the boy and meets him at the end of the line. The boy is safe and sound.";
+				} else {
+					//no to zip line
+					document.querySelector("#noZipLine").textContent = "The boy passes the zip line and continues to walk along the path. He hears, then sees, a helicopter above and signals for his rescue. The boy is safe and sound.";
+				}
+			} else {
+				//boy goes down the mountain
+				document.querySelector("#downMountain").textContent = "While the boy descends the mountain, he reaches a river and finds a raft.";
+				var raft = prompt("Does the boy take the raft? yes/no?");
+				if (raft.toLowerCase === "yes") {
+					document.querySelector("#yesRaft").textContent = "Riding the raft downstream, the boy passes a campsite and brings the raft to the beach. The campers greet him and he is saved!";
+				} else {
+					//no to raft
+					document.querySelector("#noRaft").textContent = "Walking past the raft, the boy sees a campsite ahead and screams for help. Hearing his cry, the campers find the boy and he is saved!"
+				}
+			}
+			alert("The boy lives happily ever after...");
+		</script>
+	</body>
+
+
+</html>

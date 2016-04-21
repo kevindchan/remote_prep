@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	
+	<body>
+		<!--create div with paragraph with id of greeting-->
+		<div id="greeting">
+			<p></p>
+		</div>
+		<script type="text/javascript">
+			// create variables and assign values/or not
+			var name = prompt("what is your name?"), age = prompt("what is your age?"), gender = prompt("what is your gender?"), is_member = prompt("are you a member?"), thirsty, drink_of_choice;
+			// if statement to check age
+			if (age < 21) {
+				if (gender === "male") {
+					alert("sir, you're too young!");
+				} else {
+					alert("miss, you're too young!");
+				}
+			} 
+			// if else to accept or deny based on age
+			else {
+				if (gender === "male") {
+					alert("please enter, mr. " + name);
+					thirsty = prompt("are you thirsty? yes/no");
+					if (thirsty === "yes") {
+						drink_of_choice = prompt("what would you like to drink?");
+						if (drink_of_choice === "coors light") {
+							alert("get out of my bar!");
+						} else {
+							alert("yes " + name + ", " + drink_of_choice + " coming right up!");
+						}
+					}
+				} else {
+					alert("please enter, miss. " + name);
+					thirsty = prompt("are you thirsty? yes/no");
+					if (thirsty === "yes") {
+						drink_of_choice = prompt("what would you like to drink?");
+						if (drink_of_choice === "coors light") {
+							alert("get out of my bar!");
+						} else {
+							alert("yes " + name + ", " + drink_of_choice + " coming right up!");
+						}
+					}
+				}
+			}
+			// welcome based on age
+			// prompt for drink order
+			// variable for drink order
+			// if statement to check if order is Coors light
+			// else if drink order === Coors Light
+			// kick out
+		</script>
+	</body>
+</html>

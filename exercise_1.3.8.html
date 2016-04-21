@@ -1,0 +1,71 @@
+<!--
+Exercise: Write code to play rock, paper, scissors with the user.
+
+1. Ask for input until the user enters either "R", "P", or "S"
+2. Use Math.random() to choose a play for the computer
+3. Tell the user what the outcome was
+4. Ask the user if they'd like to play again
+-->
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>R/P/S</title>
+	</head>
+	
+	<body>
+	<h1 style="text-align: center; border: 1px solid">ROCK, PAPER, SCISSORS</h1>
+
+		<script type="text/javascript">
+			//INTRODUCTION
+			window.alert("Welcome to Rock, Paper, Scissors. Get ready to Play!");
+			//while loop to keep looping
+			while (true) {
+				//USER PROMPT SELECTION
+				var userSelect = window.prompt("Select Rock(R), Paper(P), or Scissors(S).");
+				//COMPUTER SELECTION & OUTCOME
+				var cpuSelect = Math.random() * 10;
+				//COMPARISON
+				if (Math.round(cpuSelect) > 6) {
+					cpuSelect === "S";
+					if (userSelect.toUpperCase() === "R") {
+						window.alert("Computer selects Scissors(S). YOU WIN!")
+					} else if (userSelect.toUpperCase() === "S") {
+						window.alert("Computer selects Scissors(S). It's a tie.");
+					} else {
+						window.alert("Computer selects Scissors(S). You lose...");
+					};
+				} else if (Math.round(cpuSelect) > 3) {
+					cpuSelect === "P";
+					if (userSelect.toUpperCase() === "P") {
+						window.alert("Computer selects Paper(P). It's a tie.")
+					} else if (userSelect.toUpperCase() === "S") {
+						window.alert("Computer selects Paper(P). YOU WIN!");
+					} else {
+						window.alert("Computer selects Paper(P). You lose...");
+					};
+				} else {
+					cpuSelect === "R";
+					if (userSelect.toUpperCase() === "P") {
+						window.alert("Computer selects Rock(R). YOU WIN!")
+					} else if (userSelect.toUpperCase() === "S") {
+						window.alert("Computer selects Rock(R). You lose...");
+					} else {
+						window.alert("Computer selects Rock(R). It's a tie.");
+					};
+				};
+				//PLAY AGAIN
+				var playAgain = prompt("Would you like to play again? yes/no");
+				//!!...DON'T KNOW HOW TO LOOP BACK TO BEGINNING...!!
+				if (playAgain.toLowerCase() === "yes") {
+					continue; //make entire code part of while loop
+				} else {
+					window.alert("Thank you for playing!"); //if not break in while loop
+					break;
+				}
+			}
+		</script>
+	</body>
+
+</html>

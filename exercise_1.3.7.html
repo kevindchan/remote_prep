@@ -1,0 +1,44 @@
+<!--
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+console.log(Math.pow(9, 2));
+console.log(Math.random());
+console.log(Math.floor(7.2));
+console.log(Math.ceil(7.2));
+console.log(Math.ceil( Math.random() * 10 ));
+console.log(Math.ceil( Math.random() * 10 ));
+
+console.log(parseInt("23"));
+console.log(parseInt(23));
+console.log(parseInt("boink"));
+-->
+
+<!--Exercise: Write code to ask a user to enter an integer greater than 0. Keep asking for a number until it is valid.-->
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+
+		<script type="text/javascript">
+			while (true) {
+				var userNum = prompt("Please enter a valid integer:");
+				if (userNum < 0) {
+					continue;
+				} else {
+					alert("Great number!");
+					break;
+				};
+			}
+		</script>
+	</body>
+
+</html>
+
