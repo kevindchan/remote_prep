@@ -1,0 +1,42 @@
+<!-- 
+Write a function that takes an array and a function as arguments and calls that function on every value in the array, and replaces the original value with the return value of the callback function:
+
+var doubler = function(value){return value * 2};
+input: [1,2,3,4,5], doubler
+output: [2,4,6,8,10]
+ -->
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js" type="text/javascript"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+		<script>
+			var doubler = function(value){return value * 2};
+
+			function everly(arr, func) {
+				// for (var i = 0; i < arr.length; i++) {
+				// 	arr[i] = func(arr[i]);
+				// }
+				// console.log(arr);
+				_.each(arr, function(element, index, list){
+					list[index] = func(list[index]);
+				})
+				console.log(arr);
+			}
+
+			everly([1,2,3,4,5], doubler)
+			
+		</script>
+	</body>
+
+</html>

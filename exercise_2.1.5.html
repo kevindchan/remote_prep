@@ -1,0 +1,64 @@
+<!--
+Exercise: Constructing sentences
+
+1. Write a function called string_printer, that takes a string as an argument and uses $('#output').text() to place it into a specific <div> on the web page. Call it multiple times with different strings from the console.
+2. Does string_printer use a side effect or a return value?
+3. Write a function called funny_sentence that takes a noun, an adjective, a verb, and an adverb as inputs, and constructs a string of html text and uses $('#output').append() to place it on the page.
+4. Put each word argument you pass in into spans that have css rules that styles them differently to make them stand out.
+5. Invoke funny_sentence 5 times from within a <script> tag and see the result on the page.
+Extra Credit: Create a version of funny_sentence that takes no inputs, but rather constructs a funny sentence on its own from randomly chosen words
+-->
+
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+	
+		<title></title>
+
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+		<style>
+			#noun {
+				font-size: 20px;
+			}
+			#adjective {
+				color: blue;
+			}
+			#verb {
+				background-color: red;
+			}
+			#adverb {
+				font-family: Verdana;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<div id="output"></div>
+
+		<script type="text/javascript">
+
+		function stringPrinter(string){
+			$('#output').text(string);
+		}
+
+		stringPrinter("HELLO THERE!");
+		stringPrinter("GOODBYE");
+		stringPrinter("Salut mon pote!");
+
+		function funnySentence(noun, adjective, verb, adverb){
+			$('#output').append(" There once was a <span id='noun'>" + noun + "</span>. Quite a <span id='adjective'>" + adjective + "</span> <span id='noun'>" + noun + "</span>, who always <span id='verb'>" + verb + "</span> <span id='adverb'>" + adverb + "</span>.")
+		}
+
+		funnySentence("rabbit", "ferocious", "ran", "powerfully");
+		funnySentence("rabbit", "ferocious", "ran", "powerfully");
+		funnySentence("rabbit", "ferocious", "ran", "powerfully");
+		funnySentence("rabbit", "ferocious", "ran", "powerfully");
+		funnySentence("rabbit", "ferocious", "ran", "powerfully");
+
+		</script>
+	</body>
+
+</html>

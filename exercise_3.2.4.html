@@ -1,0 +1,37 @@
+<!--  
+Write a function that pushes all the values in an object to an array.
+
+input: {two: 2, four: 4, three: 3, twelve: 12}
+output: [2, 4, 3, 12]
+ -->
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js" type="text/javascript"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+		<script>
+			
+			function pushy(obj) {
+				var newArray = [];
+				_.each(obj, function(value, key, list){
+					newArray.push(value);
+				})
+				console.log(newArray);
+			}
+
+			pushy({two: 2, four: 4, three: 3, twelve: 12});
+			
+		</script>
+	</body>
+
+</html>
+

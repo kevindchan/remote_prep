@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		
+		<title></title>
+		<style>
+			#target {
+				width: 500px;
+				height: 300px;
+			}
+			.highlighted {
+				background-color: skyblue;
+				border: 1px solid black;
+			}
+			#image {
+				display: none;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<div id="target">TEXT TEXT TEXT</div>
+		<div id="magic">HOVER ME!</div>
+		<div id='image'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Margaret_Hamilton_1995.jpg/220px-Margaret_Hamilton_1995.jpg"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$('#target').on('mouseover', function(){
+			  $('#target').addClass('highlighted');
+			});
+			$('#target').on('mouseleave', function(){
+			  $('#target').removeClass('highlighted');
+			});
+			$('#magic').on('mouseover', function (){
+				$('#image').fadeIn();
+			})
+			$('#magic').on('mouseleave', function () {
+				$('#image').fadeOut();
+			})
+		</script>
+		
+	</body>
+
+</html>

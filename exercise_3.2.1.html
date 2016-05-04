@@ -1,0 +1,55 @@
+<!-- //Use _.each to loop through an array and console.log() all the values. Now use it to console.log() the indices. How would this be different if you were looping through an object?
+
+/*
+_.each(list, iteratee, [context]) Alias: forEach 
+Iterates over a list of elements, yielding each in turn to an iteratee function. The iteratee is bound to the context object, if one is passed. Each invocation of iteratee is called with three arguments: (element, index, list). If list is a JavaScript object, iteratee's arguments will be (value, key, list). Returns the list for chaining.
+*/ -->
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+		<div ='answer'></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js" type="text/javascript"></script>
+
+		<script>
+
+			//EXERCISE ONE
+			// var arr = [1, 2, 3, 4 ,5, 6];
+			// var printArray = function(array){
+			// 	console.log(array)
+			// };
+			// _.each(arr, printArray)
+
+			// _.each(list, iteratee, [context])
+
+			// iteratee = function(element, index, list) {}; 	
+			// 	array = [1, 2, 3]
+			// iteratee = function(value, key, list) {}		
+			// 	object = [{name: Kevin, age: 31}, {name: Shivinder, age:24}]
+
+			var arr = [1, 2, 3, 4 ,5, 6];
+
+			var iteratee = function(element, index, list) {
+				console.log("ELEMENT: ", element);
+			}
+
+			_.each(arr, iteratee);
+
+			_.each(arr, function(element, index) {
+				console.log("ELEMENT: ", index);
+
+			})
+
+
+
+		</script>
+	</body>
+
+</html>

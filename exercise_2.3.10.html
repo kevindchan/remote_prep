@@ -1,0 +1,54 @@
+<!--
+Exercise: Magic 8-ball
+
+1. Create a Magic 8-ball that allows a user to type a question into an input field.
+2. When the user clicks the "ask question" button, register a click handler function that randomly selects a reply from an array of appropriately vague stock phrases.
+3. Display the answer inside a glowing circle or something crazy like that.
+4. Allow the user to click an "ask again" button which clears their previous question and output.
+5. Refactor your code so that the user doesn't receive the same reply twice until all the replies have been used at least once.
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<title>Mr. Magic 8-Ball</title>
+		<style>
+			#ask {
+				padding: 5px;
+				font-size: 16px;
+			}
+			#button {
+				text-align: center;
+			}
+		</style>
+	</head>
+	
+	<body style="background-color: #64b1ec">
+		<h1 style="color: #1133db; text-align: center">Mr. Magic 8-Ball</h1>
+		<div id="button">
+			<form>
+				Enter Question: <input type="text" name="Question" value="Type here">
+			</form>	<br>
+
+			<button id='ask'>Ask Question</button>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			$('#ask').click(function () {
+				var random = Math.random();
+				if (random < .33) {
+					alert("Absolutely!");
+				} else if (random < .66) {
+					alert("Never gonna happen...");
+				} else {
+					alert("That might work out");
+				}
+			});
+		</script>
+	</body>
+
+</html>

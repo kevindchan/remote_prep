@@ -1,0 +1,38 @@
+<!-- 
+Write a function answer_logger that takes a function as input, runs it, and places the return value from that function invocation into a div#answer
+
+We can test answer_logger using the following code, we should not need to change it at all:
+
+answer_logger(function(){
+ return "I should appear in div#answer!";
+}); 
+-->
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+		
+	<div id="answer"></div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js" type="text/javascript"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+		<script>
+
+			function answerLogger(func) {
+				$('#answer').append(func);
+			}
+
+			answerLogger(function(){
+			 return "I should appear in div#answer!";
+			}); 
+		</script>
+	</body>
+
+</html>

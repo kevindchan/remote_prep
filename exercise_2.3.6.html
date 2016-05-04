@@ -1,0 +1,47 @@
+<!-- 
+Exercise: Refactor your append_strings function to use .forEach() instead of a while loop.
+-->
+
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+		
+		<div id="target"></div>
+
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+		<script>
+			var recipe = ["Get bread", "Spread PB on one slice", "Spread Jelly on other slice", "Combine slices on PB and Jelly sides", "Enjoy"];
+
+			var bucketList = ["attend Hack Reactor", "Raise kids"];
+			bucketList.push("Eat Lunch", "Sleep Well");
+			bucketList.unshift("create a software project", "finish these exercises");
+
+			// function appendStrings(arr, selectorString) {
+			// 	var i = 0;
+			// 	while (i < arr.length) {
+			// 	$(selectorString).append(arr[i] + "/ ");
+			// 	i++;
+			// 	}
+			// }
+
+			function appendStrings (arr, selectorString) {
+				arr.forEach(function (value) {
+					$(selectorString).append(value + "/ ")
+				});
+			}
+
+			appendStrings(recipe, "#target");
+			appendStrings(bucketList, "#target");
+			
+		</script>	
+	</body>
+
+</html>

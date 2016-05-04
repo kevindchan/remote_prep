@@ -1,0 +1,56 @@
+<!--
+Exercises:
+
+1. In a script tag, define a new function called get_sentence
+2. get_sentence should select a sentence randomly between two or more options and return it
+3. Save the return value to a variable called new_sentence
+4. Use jQuery to add the sentence inside a new <p> tag to the end of the HTML document
+5. Refactor your code so that it doesn't need the new_sentence variable
+6. Use a while loop to run get_sentence ten times in a row so we can make sure the sentence really is random.
+7. What is the statistical likelihood that we randomly get the same sentence ten times in a row?
+-->
+
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		
+		<title></title>
+		
+		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+	</head>
+	
+	<body>
+	  
+		
+		<script type="text/javascript">
+			
+			var sent1 = "Sentence 1",
+				sent2 = "Sentence 2",
+				sent3 = "Sentence 3";
+				
+
+			function get_sentence() {
+				var random = Math.random();
+				if (random < .33) {
+					return sent1;
+				} else if (random < .66) {
+					return sent2;
+				} else {
+					return sent3;
+				}
+			};
+
+			var i = 0;
+
+			while (i <= 10) {
+				$('body').append('<p>' + get_sentence() + '</p>');
+				i++; 
+			}
+
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!--
+Exercises:
+
+1. Define a function that console.logs a simple message and the time: new Date()
+2. Invoke your function multiple times from the console.
+3. Place your function in a script tag in an HTML document.
+4. Invoke it multiple times in the script tag.
+5. Open the HTML document in your browser and hit reload a few times.
+6. Define a function that generates an enthusiastic string of text and uses jQuery to .append() it to the HTML document (in an #output div for example).
+7. Invoke it a few dozen times from the console.
+-->
+
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		
+		<title></title>
+	
+	</head>
+	
+	<body>
+	  <div id="output">
+	    
+	   </div>
+
+	   	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+		<script type='text/javascript'>
+			var simple = function (){
+			  console.log("Hello the date is " + new Date())
+			  
+			};
+			simple();
+			simple();
+			simple();
+			
+			var second = function(){
+			  return "Hello there";
+			};
+			
+			$("#output").append(second);
+		</script>
+	
+	</body>
+
+</html>

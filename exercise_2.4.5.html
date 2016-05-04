@@ -1,0 +1,65 @@
+<!--
+Exercise:
+
+1. Use a for in loop to iterate over your cat, dream_car and dream_life objects. Re-write the loop from scratch each time and use a variable name other than key for each one.
+2. Use a for in loop to search obj for the key color and use jQuery to append its value to a special div on your web page.
+3. Search obj for the value "down", and append its key into the div.
+4. Create a variable target_key and assign it a string "greeting". Use the target_key variable and for in to find the greeting property and append its value into the div.
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title></title>
+
+	</head>
+
+	<body>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			var myCat = {
+			  name: 'Mia',
+			  age: 10,
+			  alive: true,
+			  favoriteToy: "feather",
+			  favoriteFood: "tuna",
+			  breed: "mix",
+			  color: "grey"
+			};
+
+			var myDreamLife = {};
+
+			var propertyKey = "job";
+			var anotherPropertyKey = "salary";
+			var nextProperty = "car";
+			var propertyKey4 = "location";
+			var propertyKey5 = "pet";
+			var propertyKey6 = "housing";
+
+			myDreamLife[propertyKey] = "software engineer";
+			myDreamLife[anotherPropertyKey] = "$100,000";
+			myDreamLife[nextProperty] = "Suzuki Ninja";
+			myDreamLife[propertyKey4] = "San Francisco";
+			myDreamLife[propertyKey5] = "cat";
+			myDreamLife[propertyKey6] = "apartment";
+
+			var dreamCar = {};
+
+			dreamCar.make = "Audi";
+			dreamCar.model = "S8";
+			dreamCar.color = "Lime Green";
+			dreamCar.year = 2016;
+			dreamCar.new = true;
+
+			for (var name in myCat) {
+				console.log(myCat[name]);
+			}
+
+
+		</script>
+	</body>
+
+</html>
